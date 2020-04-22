@@ -19,10 +19,9 @@ _This web application uses bike index API to track what is occuring with all reg
 
 * - Program connects to bike index API
 * - The program accepts user input
-* - User inputs a city | 'seattle' | '287 red bikes registered' |
-* - User inputs a city | 'seattle' | '38 red bikes stolen' |
-* - User inputs a city | 'seattle' | 'displays all the different manufactor's of red bikes in the requested city' |
-* - 
+* - User inputs a city | 'seattle' | 'number of bikes stolen' |
+* - User inputs a color | 'red' | 'number of red bikes stolen in that area' |
+* - User inputs a manufactorer | 'giant' | 'displays all the bikes from that manufactorer that have been stolen in that area' |
 
 ## Known Bugs
 - 
