@@ -1,22 +1,16 @@
 <html>
   <head>
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="main.js"></script>
-    <title>Weather</title>
+    <!-- <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script> -->
+    <title>Bike Index</title>
   </head>
   <body>
     <div class="container">
-      <h1>Get Weather Conditions From Anywhere!</h1>
-      <label for="location">Enter a location:</label>
-      <input id="location" type="text">
-      <button class="btn-success" id="weatherLocation">Get Current Temperature and Humidity</button>
-      <div class="errors"></div>
-      <div class="showHumidity"></div>
-      <div class="showTemp"></div>
-      <div class="giphyImg">
-       <img src="" alt="" id="showGiphyImg"> 
-      </div>
-      <div class="showError"></div>
+      <h1>Get Bike Information</h1>
+      <input id="location" type="text" placeholder="Enter a location">
+      <button class="btn-success" id="bikeInfo">Get Current Bike Data</button>
+      <div id="showRedBikeCount"></div>
+      <div id="showBlueBikeCount"></div>
     </div>
   </body>
 </html>
