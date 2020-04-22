@@ -7,22 +7,23 @@ $(document).ready (() => {
    $("#location").val('');
 
     let request = new XMLHttpRequest();
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
+    const url = `https://bikeindex.org:443/api/v3/search?location=${city}&distance=10&appid=${process.env.API_KEY}`;
 
-    request.onreadystatechange = (() => {
-      if (this.readystate === 4 && this.status === 200) {
+    request.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
         const response = JSON.parse(this.responseText);
         getElements(response);
       }
-    })
+    }
 
     request.open("GET", url, true);
     request.send();
 
-    const getElements = ((response) => {
-      $('#showRedBikeCount').text(`You are searching in ${city} and there are ${response.main.humidity} stolen red bikes.`);
-      $('#showBlueBikeCount').text(`You are searching in ${city} and there are ${response.main.temp} stolen blue bikes.`);
-    })
+    const getElements = function(response) {
+      $('#showBikeCount').text(`You are searching in ${city} and there are ${response.bikes.length} stolen bikes.`);
+      // $('#showRedColorCount').text(`You are searching in ${city} and there are ${response.bikes.frame_colors} stolen red bikes.`);
+      // $('#showBlueColorCount').text(`You are searching in ${city} and there are ${response.main.temp} stolen blue bikes.`);
+    }
 
   })
 })
